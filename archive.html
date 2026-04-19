@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>传承档案｜蒙医云境</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="page-bg"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand-lockup brand-link" href="./index.html">
+        <span class="brand-mark">
+          <img class="brand-logo" src="./assets/branding/mengyi-yunjing-logo.png" alt="蒙医云境 Logo" />
+        </span>
+        <div>
+          <div class="brand-name">蒙医云境</div>
+          <div class="brand-subtitle">蒙医药非遗文化视觉数字化传承平台</div>
+        </div>
+      </a>
+      <nav class="topnav">
+        <a class="nav-btn link-btn" href="./index.html">首页</a>
+        <a class="nav-btn link-btn" href="./atlas.html">非遗图谱</a>
+        <a class="nav-btn link-btn" href="./classics.html">古籍典藏</a>
+        <a class="nav-btn link-btn is-active" href="./archive.html">传承档案</a>
+        <a class="nav-btn link-btn" href="./admin.html">管理看板</a>
+        <a class="nav-btn link-btn" href="./about.html">关于项目</a>
+        <a class="nav-btn link-btn" data-auth-link href="./login.html">登录</a>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <section class="card page-hero">
+        <span class="eyebrow dark">ARCHIVE & ORAL HISTORY</span>
+        <h1>传承档案</h1>
+        <p>围绕人物、机构和田野计划，建立蒙医药非遗文化的口述、影像与项目档案视图。</p>
+      </section>
+
+      <section class="grid two-up">
+        <div class="card">
+          <div class="section-head">
+            <h2>核心档案</h2>
+            <span>人物与团队</span>
+          </div>
+          <div id="archive-page-list" class="timeline-list"></div>
+        </div>
+        <div class="card">
+          <div class="section-head">
+            <h2>档案方法</h2>
+            <span>内容整理框架</span>
+          </div>
+          <div class="note-stack">
+            <div class="note-item">
+              <strong>人物口述</strong>
+              <p>采集传承人、学徒和研究者的语言叙述，保留疗法、器具和经验背景。</p>
+            </div>
+            <div class="note-item">
+              <strong>器物影像</strong>
+              <p>记录传统器具和药材采样环境，保留使用痕迹和地域特征。</p>
+            </div>
+            <div class="note-item">
+              <strong>项目脉络</strong>
+              <p>把视觉整理、田野采风、展陈课程等项目线索纳入统一档案视图。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <h2>田野与展陈影像</h2>
+          <span>蒙医药场景资料</span>
+        </div>
+        <div id="archive-visuals" class="gallery-grid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>蒙医云境</strong>
+        <p>以人物、机构和田野计划为主线，持续沉淀蒙医药非遗文化的口述与项目档案。</p>
+      </div>
+      <div class="footer-links">
+        <a href="./index.html">首页</a>
+        <a href="./atlas.html">非遗图谱</a>
+        <a href="./classics.html">古籍典藏</a>
+        <a href="./admin.html">管理看板</a>
+        <a href="./about.html">关于项目</a>
+        <a href="./login.html">登录</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./data.js"></script>
+  <script src="./auth.js"></script>
+  <script src="./auth-guard.js"></script>
+  <script src="./archive.js"></script>
+</body>
+</html>
+

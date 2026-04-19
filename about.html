@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>关于项目｜蒙医云境</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="page-bg"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand-lockup brand-link" href="./index.html">
+        <span class="brand-mark">
+          <img class="brand-logo" src="./assets/branding/mengyi-yunjing-logo.png" alt="蒙医云境 Logo" />
+        </span>
+        <div>
+          <div class="brand-name">蒙医云境</div>
+          <div class="brand-subtitle">蒙医药非遗文化视觉数字化传承平台</div>
+        </div>
+      </a>
+      <nav class="topnav">
+        <a class="nav-btn link-btn" href="./index.html">首页</a>
+        <a class="nav-btn link-btn" href="./atlas.html">非遗图谱</a>
+        <a class="nav-btn link-btn" href="./classics.html">古籍典藏</a>
+        <a class="nav-btn link-btn" href="./archive.html">传承档案</a>
+        <a class="nav-btn link-btn" href="./admin.html">管理看板</a>
+        <a class="nav-btn link-btn is-active" href="./about.html">关于项目</a>
+        <a class="nav-btn link-btn" data-auth-link href="./login.html">登录</a>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <section class="card page-hero">
+        <span class="eyebrow dark">ABOUT THE PROJECT</span>
+        <h1>关于项目</h1>
+        <p>“蒙医云境”以蒙医药非遗文化为主题，结合视觉设计、图谱采样、音频讲述与数字内容管理，构建可展示、可延展的数字传承原型。</p>
+      </section>
+
+      <section class="grid two-up">
+        <div class="card">
+          <div class="section-head">
+            <h2>项目定位</h2>
+            <span>展示 / 答辩 / 延展</span>
+          </div>
+          <div class="note-stack">
+            <div class="note-item">
+              <strong>视觉数字化传承</strong>
+              <p>通过现代界面和图谱逻辑，让非遗内容在数字场景中可看、可讲、可传播。</p>
+            </div>
+            <div class="note-item">
+              <strong>多端并行</strong>
+              <p>当前同时保留微信小程序版和 HTML 官网版，方便后续分别用于移动端和电脑端展示。</p>
+            </div>
+            <div class="note-item">
+              <strong>可继续扩展</strong>
+              <p>后续可衔接真实数据库、云存储、后台审核流和正式官网部署。</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="section-head">
+            <h2>内容模块</h2>
+            <span>当前官网版本</span>
+          </div>
+          <div id="about-modules" class="module-grid"></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <h2>视觉资料墙</h2>
+          <span>蒙医云境图像资产</span>
+        </div>
+        <div id="about-gallery" class="gallery-grid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>蒙医云境</strong>
+        <p>项目当前同时保留 HTML 官网版与微信小程序版，方便后续双端继续推进。</p>
+      </div>
+      <div class="footer-links">
+        <a href="./index.html">首页</a>
+        <a href="./atlas.html">非遗图谱</a>
+        <a href="./classics.html">古籍典藏</a>
+        <a href="./archive.html">传承档案</a>
+        <a href="./admin.html">管理看板</a>
+        <a href="./login.html">登录</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./data.js"></script>
+  <script src="./auth.js"></script>
+  <script src="./auth-guard.js"></script>
+  <script src="./about.js"></script>
+</body>
+</html>
+

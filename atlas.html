@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>非遗图谱｜蒙医云境</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="page-bg"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand-lockup brand-link" href="./index.html">
+        <span class="brand-mark">
+          <img class="brand-logo" src="./assets/branding/mengyi-yunjing-logo.png" alt="蒙医云境 Logo" />
+        </span>
+        <div>
+          <div class="brand-name">蒙医云境</div>
+          <div class="brand-subtitle">蒙医药非遗文化视觉数字化传承平台</div>
+        </div>
+      </a>
+      <nav class="topnav">
+        <a class="nav-btn link-btn" href="./index.html">首页</a>
+        <a class="nav-btn link-btn is-active" href="./atlas.html">非遗图谱</a>
+        <a class="nav-btn link-btn" href="./classics.html">古籍典藏</a>
+        <a class="nav-btn link-btn" href="./archive.html">传承档案</a>
+        <a class="nav-btn link-btn" href="./admin.html">管理看板</a>
+        <a class="nav-btn link-btn" href="./about.html">关于项目</a>
+        <a class="nav-btn link-btn" data-auth-link href="./login.html">登录</a>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <section class="card page-hero">
+        <span class="eyebrow dark">HERITAGE ATLAS</span>
+        <h1>非遗图谱数据库</h1>
+        <p>集中整理药材、疗法、纹样、音频与器具相关内容，形成可筛选、可跳转、可继续接库的展示结构。</p>
+      </section>
+
+      <section class="card atlas-toolbar">
+        <div>
+          <div class="section-head compact">
+            <h2>图谱检索</h2>
+            <span id="atlas-count">0 条内容</span>
+          </div>
+          <p class="muted-text">当前优先展示已发布条目，方便用于官网演示与对外展示。</p>
+        </div>
+        <div class="toolbar-actions">
+          <input id="search-input" class="search-input" type="search" placeholder="搜索药材、疗法、纹样、人物故事" />
+          <div id="atlas-filters" class="filter-row"></div>
+        </div>
+      </section>
+
+      <section class="grid two-up">
+        <div id="atlas-grid" class="atlas-grid atlas-grid-wide"></div>
+        <aside class="card">
+          <div class="section-head">
+            <h2>最近浏览</h2>
+            <span>本地记录</span>
+          </div>
+          <div id="atlas-recent-list" class="side-list"></div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>蒙医云境</strong>
+        <p>图谱页聚合已发布的非遗内容，后续可继续替换为真实图片和数据库接口。</p>
+      </div>
+      <div class="footer-links">
+        <a href="./index.html">首页</a>
+        <a href="./archive.html">传承档案</a>
+        <a href="./classics.html">古籍典藏</a>
+        <a href="./admin.html">管理看板</a>
+        <a href="./about.html">关于项目</a>
+        <a href="./login.html">登录</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./data.js"></script>
+  <script src="./auth.js"></script>
+  <script src="./auth-guard.js"></script>
+  <script src="./atlas.js"></script>
+</body>
+</html>
+

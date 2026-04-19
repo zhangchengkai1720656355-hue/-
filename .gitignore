@@ -1,0 +1,25 @@
+.vercel
+
+# Tencent Cloud EdgeOne
+.env
+.edgeone/*
+.edgeone-release/
+.tef_dist/*
+email-server/
+sms-server/
+web-html.zip
+assets/books/*.pdf
+
+# Dependencies
+node_modules/
+
+# Environment files
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+  

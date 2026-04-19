@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>个人中心｜蒙医云境</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="page-bg"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand-lockup brand-link" href="./index.html">
+        <span class="brand-mark">
+          <img class="brand-logo" src="./assets/branding/mengyi-yunjing-logo.png" alt="蒙医云境 Logo" />
+        </span>
+        <div>
+          <div class="brand-name">蒙医云境</div>
+          <div class="brand-subtitle">蒙医药非遗文化视觉数字化传承平台</div>
+        </div>
+      </a>
+      <nav class="topnav">
+        <a class="nav-btn link-btn" href="./index.html">首页</a>
+        <a class="nav-btn link-btn" href="./atlas.html">非遗图谱</a>
+        <a class="nav-btn link-btn" href="./classics.html">古籍典藏</a>
+        <a class="nav-btn link-btn" href="./archive.html">传承档案</a>
+        <a class="nav-btn link-btn" href="./admin.html">管理看板</a>
+        <a class="nav-btn link-btn" href="./about.html">关于项目</a>
+        <a class="nav-btn link-btn is-active" data-auth-link href="./profile.html">个人中心</a>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <section class="profile-layout">
+        <div class="card profile-hero theme-herb" id="profile-summary"></div>
+        <div class="card profile-side">
+          <div class="section-head">
+            <h2>快捷操作</h2>
+            <span>本地演示</span>
+          </div>
+          <div class="note-stack">
+            <div class="note-item">
+              <strong>当前账号</strong>
+              <p id="profile-account-tip">正在读取本地登录信息。</p>
+            </div>
+            <div class="note-item">
+              <strong>演示说明</strong>
+              <p>此页面基于浏览器本地存储模拟登录状态，刷新页面后仍会保留登录结果。</p>
+            </div>
+          </div>
+          <div class="hero-actions inline-actions">
+            <a class="secondary-btn link-btn" href="./atlas.html">继续浏览图谱</a>
+            <button id="logout-btn" class="primary-btn" type="button">退出登录</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid two-up">
+        <div class="card">
+          <div class="section-head">
+            <h2>账号信息</h2>
+            <span>本地会话</span>
+          </div>
+          <div id="profile-meta" class="note-stack"></div>
+        </div>
+        <div class="card">
+          <div class="section-head">
+            <h2>后续可接能力</h2>
+            <span>下一步接口方向</span>
+          </div>
+          <div class="note-stack">
+            <div class="note-item">
+              <strong>真实邮箱登录</strong>
+              <p>可把邮箱验证码接到 SMTP 服务中，替换当前本地模拟逻辑并直接用于网站端登录。</p>
+            </div>
+            <div class="note-item">
+              <strong>第三方授权</strong>
+              <p>可继续接 QQ OAuth、微信开放平台或与你的小程序用户体系同步。</p>
+            </div>
+            <div class="note-item">
+              <strong>个人内容同步</strong>
+              <p>后续可以把收藏、浏览记录、学习档案统一展示到个人中心。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <h2>我的收藏</h2>
+          <span>按当前账号保存</span>
+        </div>
+        <div id="profile-favorites" class="favorites-grid"></div>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <h2>最近浏览</h2>
+          <span>按当前账号记录</span>
+        </div>
+        <div id="profile-history" class="favorites-grid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>蒙医云境</strong>
+        <p>个人中心当前使用本地存储模拟登录流程，便于演示登录、注册和退出效果。</p>
+      </div>
+      <div class="footer-links">
+        <a href="./index.html">首页</a>
+        <a href="./atlas.html">非遗图谱</a>
+        <a href="./classics.html">古籍典藏</a>
+        <a href="./archive.html">传承档案</a>
+        <a href="./about.html">关于项目</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./data.js"></script>
+  <script src="./auth.js"></script>
+  <script src="./auth-guard.js"></script>
+  <script src="./profile.js"></script>
+</body>
+</html>
+

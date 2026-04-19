@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>登录中心 - 蒙医云境</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="page-bg"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand-lockup brand-link" href="./index.html">
+        <span class="brand-mark">
+          <img class="brand-logo" src="./assets/branding/mengyi-yunjing-logo.png" alt="蒙医云境 Logo" />
+        </span>
+        <div>
+          <div class="brand-name">蒙医云境</div>
+          <div class="brand-subtitle">蒙医药非遗文化视觉数字化传承平台</div>
+        </div>
+      </a>
+      <nav class="topnav">
+        <a class="nav-btn link-btn" href="./index.html">首页</a>
+        <a class="nav-btn link-btn" href="./atlas.html">非遗图谱</a>
+        <a class="nav-btn link-btn" href="./classics.html">古籍典藏</a>
+        <a class="nav-btn link-btn" href="./archive.html">传承档案</a>
+        <a class="nav-btn link-btn" href="./admin.html">管理看板</a>
+        <a class="nav-btn link-btn" href="./about.html">关于项目</a>
+        <a class="nav-btn link-btn is-active" data-auth-link href="./login.html">登录</a>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <section class="login-layout">
+        <div class="card login-hero theme-pattern" style="background-image: linear-gradient(180deg, rgba(29, 17, 12, 0.18) 0%, rgba(29, 17, 12, 0.52) 100%), url('./assets/medicinal/hero-herbs.png'); background-size: cover; background-position: center;">
+          <span class="eyebrow">AUTH CENTER</span>
+          <h1>登录蒙医云境</h1>
+          <p>支持注册、QQ 登录、微信登录和邮箱验证码登录。当前 HTML 版已接入邮箱验证码接口，方便你直接做网站端演示与联调。</p>
+          <div class="login-benefits">
+            <div class="soft-card login-benefit">
+              <strong>同步收藏</strong>
+              <p>登录后可同步图谱收藏、最近浏览与个人学习路径。</p>
+            </div>
+            <div class="soft-card login-benefit">
+              <strong>接入真实邮件</strong>
+              <p>当前网页已对接邮箱验证码服务，启动邮件服务后即可真实发信。</p>
+            </div>
+            <div class="soft-card login-benefit">
+              <strong>双端统一</strong>
+              <p>后续可与小程序共用账号体系和内容权限逻辑，网页端先用邮箱登录即可。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card login-panel">
+          <div class="auth-switch" id="auth-switch">
+            <button class="auth-tab is-active" data-mode="login" type="button">登录</button>
+            <button class="auth-tab" data-mode="register" type="button">注册</button>
+          </div>
+
+          <section class="auth-section is-active" data-auth-panel="login">
+            <div class="section-head compact">
+              <h2>账号登录</h2>
+              <span>邮箱密码 / 验证码 / QQ / 微信</span>
+            </div>
+
+            <div class="auth-banner">
+              当前支持两种登录方式：直接输入邮箱和密码登录，或先获取邮箱验证码再登录。跨设备首次登录时，推荐优先使用邮箱验证码，系统会自动同步当前设备。
+            </div>
+
+            <div class="oauth-grid">
+              <button class="oauth-card qq-card" type="button" data-provider="QQ">
+                <span class="oauth-icon">Q</span>
+                <span>
+                  <strong>QQ 登录</strong>
+                  <small>适合电脑端快速授权接入</small>
+                </span>
+              </button>
+              <button class="oauth-card wechat-card" type="button" data-provider="微信">
+                <span class="oauth-icon">微</span>
+                <span>
+                  <strong>微信登录</strong>
+                  <small>适合后续与小程序账号体系打通</small>
+                </span>
+              </button>
+            </div>
+
+            <div class="auth-divider"><span>邮箱密码登录或验证码登录</span></div>
+
+            <form id="login-form" class="auth-form">
+              <label class="field">
+                <span>邮箱</span>
+                <input type="email" name="email" placeholder="请输入邮箱地址" />
+              </label>
+              <label class="field">
+                <span>密码</span>
+                <input type="password" name="password" placeholder="请输入登录密码，不使用验证码时必填" />
+              </label>
+              <label class="field inline-field">
+                <span>邮箱验证码</span>
+                <div class="field-row">
+                  <input type="text" name="code" placeholder="若使用验证码登录，请先获取后再输入" />
+                  <button class="secondary-btn auth-code-btn" type="button">获取验证码</button>
+                </div>
+              </label>
+              <div class="field-hint">登录时密码和验证码二选一即可。若你换了设备，先使用邮箱验证码登录一次，系统会自动把这个邮箱同步到当前设备。</div>
+              <label class="check-row">
+                <input type="checkbox" checked />
+                <span>我已阅读并同意《用户协议》和《隐私政策》</span>
+              </label>
+              <button class="primary-btn auth-submit" type="submit">立即登录</button>
+            </form>
+          </section>
+
+          <section class="auth-section" data-auth-panel="register">
+            <div class="section-head compact">
+              <h2>注册账号</h2>
+              <span>新用户创建</span>
+            </div>
+
+            <div class="auth-banner">
+              注册同样通过邮箱验证码校验。注册成功后账号会写入当前设备；如果之后换设备登录，请先用邮箱验证码同步一次。
+            </div>
+
+            <form id="register-form" class="auth-form">
+              <label class="field">
+                <span>昵称</span>
+                <input type="text" name="nickname" placeholder="请输入昵称" />
+              </label>
+              <label class="field">
+                <span>邮箱</span>
+                <input type="email" name="registerEmail" placeholder="请输入邮箱地址" />
+              </label>
+              <label class="field inline-field">
+                <span>邮箱验证码</span>
+                <div class="field-row">
+                  <input type="text" name="registerCode" placeholder="请输入验证码" />
+                  <button class="secondary-btn auth-code-btn" type="button">获取验证码</button>
+                </div>
+              </label>
+              <div class="field-hint">先点击“获取验证码”，去邮箱查看验证码后填入，再点击“立即注册”。</div>
+              <label class="field">
+                <span>设置密码</span>
+                <input type="password" name="password" placeholder="请输入 6-20 位密码" />
+              </label>
+              <button class="primary-btn auth-submit" type="submit">立即注册</button>
+            </form>
+          </section>
+
+          <div class="hero-actions inline-actions auth-aux-actions">
+            <button id="reset-demo-btn" class="secondary-btn" type="button">重置演示数据</button>
+          </div>
+
+          <div id="auth-feedback" class="auth-feedback">当前为网页端登录界面。跨设备时请优先使用邮箱验证码登录，验证成功后会自动跳转到个人中心。</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>蒙医云境</strong>
+        <p>登录中心当前已接入邮箱验证码接口结构，后续可继续扩展 QQ OAuth、微信开放平台，或与小程序统一登录。</p>
+      </div>
+      <div class="footer-links">
+        <a href="./index.html">首页</a>
+        <a href="./atlas.html">非遗图谱</a>
+        <a href="./classics.html">古籍典藏</a>
+        <a href="./archive.html">传承档案</a>
+        <a href="./about.html">关于项目</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./auth.js"></script>
+  <script src="./login.js"></script>
+</body>
+</html>
+

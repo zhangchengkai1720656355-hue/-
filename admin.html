@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>管理看板｜蒙医云境</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="page-bg"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand-lockup brand-link" href="./index.html">
+        <span class="brand-mark">
+          <img class="brand-logo" src="./assets/branding/mengyi-yunjing-logo.png" alt="蒙医云境 Logo" />
+        </span>
+        <div>
+          <div class="brand-name">蒙医云境</div>
+          <div class="brand-subtitle">蒙医药非遗文化视觉数字化传承平台</div>
+        </div>
+      </a>
+      <nav class="topnav">
+        <a class="nav-btn link-btn" href="./index.html">首页</a>
+        <a class="nav-btn link-btn" href="./atlas.html">非遗图谱</a>
+        <a class="nav-btn link-btn" href="./classics.html">古籍典藏</a>
+        <a class="nav-btn link-btn" href="./archive.html">传承档案</a>
+        <a class="nav-btn link-btn is-active" href="./admin.html">管理看板</a>
+        <a class="nav-btn link-btn" href="./about.html">关于项目</a>
+        <a class="nav-btn link-btn" data-auth-link href="./login.html">登录</a>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <section class="card page-hero">
+        <span class="eyebrow dark">ADMIN OVERVIEW</span>
+        <h1>管理看板</h1>
+        <p>以内容状态、审核流程和发布节奏为核心，展示当前“蒙医云境”图谱数据的结构性分布。</p>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <h2>状态总览</h2>
+          <span>图谱数据概况</span>
+        </div>
+        <div id="admin-overview-page" class="mini-grid admin-overview"></div>
+      </section>
+
+      <section class="grid two-up">
+        <div class="card">
+          <div class="section-head">
+            <h2>内容清单</h2>
+            <span>草稿 / 待审核 / 已发布</span>
+          </div>
+          <div id="admin-list-page" class="admin-list"></div>
+        </div>
+        <div class="card">
+          <div class="section-head">
+            <h2>后台说明</h2>
+            <span>后续接云开发方向</span>
+          </div>
+          <div class="note-stack">
+            <div class="note-item">
+              <strong>审核流保留</strong>
+              <p>当前页面按草稿、待审核、已发布三类状态展示，便于后续直接映射到小程序云数据库。</p>
+            </div>
+            <div class="note-item">
+              <strong>内容资产扩展</strong>
+              <p>后续可继续接入图片、音频、封面、分类标签和更新时间等字段。</p>
+            </div>
+            <div class="note-item">
+              <strong>双端结构统一</strong>
+              <p>HTML 官网版与小程序版共用同一套内容逻辑，便于同步迭代。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>蒙医云境</strong>
+        <p>管理看板延续小程序中的审核流逻辑，便于后续统一接入云开发数据。</p>
+      </div>
+      <div class="footer-links">
+        <a href="./index.html">首页</a>
+        <a href="./atlas.html">非遗图谱</a>
+        <a href="./classics.html">古籍典藏</a>
+        <a href="./archive.html">传承档案</a>
+        <a href="./about.html">关于项目</a>
+        <a href="./login.html">登录</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./data.js"></script>
+  <script src="./auth.js"></script>
+  <script src="./auth-guard.js"></script>
+  <script src="./admin.js"></script>
+</body>
+</html>
+

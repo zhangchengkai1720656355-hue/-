@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>图谱详情｜蒙医云境</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="page-bg"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand-lockup brand-link" href="./index.html">
+        <span class="brand-mark">
+          <img class="brand-logo" src="./assets/branding/mengyi-yunjing-logo.png" alt="蒙医云境 Logo" />
+        </span>
+        <div>
+          <div class="brand-name">蒙医云境</div>
+          <div class="brand-subtitle">蒙医药非遗文化视觉数字化传承平台</div>
+        </div>
+      </a>
+      <nav class="topnav">
+        <a class="nav-btn link-btn" href="./index.html">返回首页</a>
+        <a class="nav-btn link-btn" href="./atlas.html">图谱列表</a>
+        <a class="nav-btn link-btn" href="./classics.html">古籍典藏</a>
+        <a class="nav-btn link-btn" href="./archive.html">传承档案</a>
+        <a class="nav-btn link-btn" data-auth-link href="./login.html">登录</a>
+      </nav>
+    </header>
+
+    <main class="layout detail-layout-page">
+      <section class="card detail-page-main">
+        <div id="detail-page-content"></div>
+      </section>
+      <aside class="card detail-page-side">
+        <div class="section-head">
+          <h2>最近浏览</h2>
+          <span>本地记录</span>
+        </div>
+        <div id="detail-recent-list" class="side-list"></div>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>蒙医云境</strong>
+        <p>图谱详情页当前保留导览音频位与最近浏览逻辑，后续可以继续接真实音频与分享能力。</p>
+      </div>
+      <div class="footer-links">
+        <a href="./index.html">首页</a>
+        <a href="./atlas.html">非遗图谱</a>
+        <a href="./classics.html">古籍典藏</a>
+        <a href="./archive.html">传承档案</a>
+        <a href="./about.html">关于项目</a>
+        <a href="./login.html">登录</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./data.js"></script>
+  <script src="./auth.js"></script>
+  <script src="./auth-guard.js"></script>
+  <script src="./detail.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,7 @@
+{
+  "buildCommand": "node scripts/prepare-edgeone-release.js",
+  "installCommand": "npm install",
+  "outputDirectory": ".edgeone-release",
+  "nodeVersion": "22.11.0",
+  "devCommand": "npx http-server . -p 3000 -c-1"
+}

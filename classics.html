@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>古籍典藏｜蒙医云境</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="page-bg"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand-lockup brand-link" href="./index.html">
+        <span class="brand-mark">
+          <img class="brand-logo" src="./assets/branding/mengyi-yunjing-logo.png" alt="蒙医云境 Logo" />
+        </span>
+        <div>
+          <div class="brand-name">蒙医云境</div>
+          <div class="brand-subtitle">蒙医药非遗文化视觉数字化传承平台</div>
+        </div>
+      </a>
+      <nav class="topnav">
+        <a class="nav-btn link-btn" href="./index.html">首页</a>
+        <a class="nav-btn link-btn" href="./atlas.html">非遗图谱</a>
+        <a class="nav-btn link-btn is-active" href="./classics.html">古籍典藏</a>
+        <a class="nav-btn link-btn" href="./archive.html">传承档案</a>
+        <a class="nav-btn link-btn" href="./admin.html">管理看板</a>
+        <a class="nav-btn link-btn" href="./about.html">关于项目</a>
+        <a class="nav-btn link-btn" data-auth-link href="./login.html">登录</a>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <section class="card page-hero">
+        <span class="eyebrow dark">CLASSIC LIBRARY</span>
+        <h1>古籍典藏</h1>
+        <p>登录后可直接在线查阅站内收录的蒙医药古籍 PDF。当前已接入《四部医典》和《蒙药正典》，可作为教学、展示与研究阅读入口。</p>
+      </section>
+
+      <section class="classics-layout">
+        <aside class="card classics-sidebar">
+          <div class="section-head">
+            <h2>典藏目录</h2>
+            <span>点击切换阅读</span>
+          </div>
+          <div id="classics-list" class="classics-list"></div>
+        </aside>
+
+        <section class="card classics-viewer">
+          <div class="reader-shell">
+            <div class="reader-toolbar">
+              <div>
+                <div class="section-head compact">
+                  <h2 id="reader-title">古籍阅读器</h2>
+                  <span>站内在线查阅</span>
+                </div>
+                <p id="reader-subtitle" class="muted-text">选择左侧典藏后，将在此处直接打开 PDF。</p>
+                <div id="reader-meta" class="classic-meta"></div>
+              </div>
+              <div class="hero-actions inline-actions">
+                <a id="reader-open" class="primary-btn link-btn primary-link" href="./assets/books/sibu-yidian.pdf" target="_blank" rel="noopener noreferrer">新窗口查看</a>
+              </div>
+            </div>
+            <div id="reader-empty" class="reader-placeholder" hidden>
+              <div>
+                <strong>暂无可用古籍</strong>
+                <p>请先在网站目录中接入 PDF 资源。</p>
+              </div>
+            </div>
+            <iframe id="reader-frame" class="reader-frame" title="古籍在线阅读器" src="./assets/books/sibu-yidian.pdf"></iframe>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>蒙医云境</strong>
+        <p>古籍典藏页当前支持站内直接阅读 PDF，后续可继续增加目录检索、章节锚点与批注功能。</p>
+      </div>
+      <div class="footer-links">
+        <a href="./index.html">首页</a>
+        <a href="./atlas.html">非遗图谱</a>
+        <a href="./classics.html">古籍典藏</a>
+        <a href="./archive.html">传承档案</a>
+        <a href="./about.html">关于项目</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./data.js"></script>
+  <script src="./auth.js"></script>
+  <script src="./auth-guard.js"></script>
+  <script src="./classics.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>蒙医云境｜蒙医药非遗文化视觉数字化传承平台</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="page-bg"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand-lockup brand-link" href="./index.html">
+        <span class="brand-mark">
+          <img class="brand-logo" src="./assets/branding/mengyi-yunjing-logo.png" alt="蒙医云境 Logo" />
+        </span>
+        <div>
+          <div class="brand-name">蒙医云境</div>
+          <div class="brand-subtitle">蒙医药非遗文化视觉数字化传承平台</div>
+        </div>
+      </a>
+      <nav class="topnav">
+        <a class="nav-btn link-btn is-active" href="./index.html">首页</a>
+        <a class="nav-btn link-btn" href="./atlas.html">非遗图谱</a>
+        <a class="nav-btn link-btn" href="./classics.html">古籍典藏</a>
+        <a class="nav-btn link-btn" href="./archive.html">传承档案</a>
+        <a class="nav-btn link-btn" href="./admin.html">管理看板</a>
+        <a class="nav-btn link-btn" href="./about.html">关于项目</a>
+        <a class="nav-btn link-btn" data-auth-link href="./login.html">登录</a>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <section class="hero-card card">
+        <div class="hero-copy">
+          <span class="eyebrow">MONGOLIAN MEDICINE HERITAGE</span>
+          <h1>让蒙医药非遗内容，以更直观的视觉语言被看见、被理解、被传承。</h1>
+          <p>
+            “蒙医云境”围绕药材采样、疗法图谱、口述档案与数字整理流程，
+            构建适用于答辩展示、课程传播、展陈讲述与后续官网部署的多端原型。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-btn link-btn primary-link" href="./atlas.html">进入非遗图谱</a>
+            <a class="secondary-btn link-btn" href="./admin.html">查看管理看板</a>
+          </div>
+          <div class="hero-tags" id="hero-tags"></div>
+        </div>
+        <div class="hero-metrics" id="hero-metrics"></div>
+      </section>
+
+      <section class="card showcase-card">
+        <div class="section-head">
+          <h2>视觉横幅</h2>
+          <span>官网主视觉轮播位</span>
+        </div>
+        <div id="hero-showcase" class="hero-showcase"></div>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <h2>蒙医药影像档案</h2>
+          <span>大量主题图片已接入首页</span>
+        </div>
+        <div id="image-gallery" class="gallery-grid"></div>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <h2>古籍典藏</h2>
+          <span>登录后在线查阅《四部医典》《蒙药正典》</span>
+        </div>
+        <div id="home-classics" class="classics-grid"></div>
+        <div class="hero-actions inline-actions">
+          <a class="primary-btn link-btn primary-link" href="./classics.html">进入古籍典藏</a>
+        </div>
+      </section>
+
+      <section class="grid two-up">
+        <div class="card">
+          <div class="section-head">
+            <h2>本期精选</h2>
+            <span>内容策展</span>
+          </div>
+          <div id="featured-stories" class="story-list"></div>
+        </div>
+        <div class="card">
+          <div class="section-head">
+            <h2>图谱预览</h2>
+            <span>高频内容入口</span>
+          </div>
+          <div id="home-atlas" class="mini-grid"></div>
+          <div class="hero-actions inline-actions">
+            <a class="primary-btn link-btn primary-link" href="./atlas.html">打开完整图谱库</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid two-up archive-layout">
+        <div class="card">
+          <div class="section-head">
+            <h2>传承档案预览</h2>
+            <span>人物与项目线索</span>
+          </div>
+          <div id="archive-list" class="timeline-list"></div>
+          <div class="hero-actions inline-actions">
+            <a class="primary-btn link-btn primary-link" href="./archive.html">查看档案页</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="section-head">
+            <h2>最近浏览</h2>
+            <span>本地记录</span>
+          </div>
+          <div id="recent-list" class="side-list"></div>
+        </div>
+      </section>
+
+      <section class="grid two-up admin-layout">
+        <div class="card">
+          <div class="section-head">
+            <h2>管理概览</h2>
+            <span>当前内容状态</span>
+          </div>
+          <div id="admin-overview" class="mini-grid admin-overview"></div>
+        </div>
+        <div class="card">
+          <div class="section-head">
+            <h2>版本说明</h2>
+            <span>HTML 官网与小程序并行</span>
+          </div>
+          <div class="note-stack">
+            <div class="note-item">
+              <strong>电脑端展示入口</strong>
+              <p>HTML 版本适合用于答辩演示、作品集展示、项目汇报和后续官网原型。</p>
+            </div>
+            <div class="note-item">
+              <strong>小程序继续保留</strong>
+              <p>微信小程序版仍保留在原项目中，后续审核通过后可以继续上线和迭代。</p>
+            </div>
+            <div class="note-item">
+              <strong>后续可接真实数据</strong>
+              <p>当前静态页面结构已与图谱、详情、档案、后台看板拆分，便于继续接数据库接口。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>蒙医云境</strong>
+        <p>蒙医药非遗文化视觉数字化传承平台，面向答辩展示、项目传播与后续官网部署。</p>
+      </div>
+      <div class="footer-links">
+        <a href="./atlas.html">非遗图谱</a>
+        <a href="./classics.html">古籍典藏</a>
+        <a href="./archive.html">传承档案</a>
+        <a href="./admin.html">管理看板</a>
+        <a href="./about.html">关于项目</a>
+        <a href="./login.html">登录</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./data.js"></script>
+  <script src="./auth.js"></script>
+  <script src="./auth-guard.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
+
